@@ -39,3 +39,11 @@ def test_includes_todo_returns_True_when_todo_not_at_start():
     result = includes_todo(notes)
     assert result == True
 
+def test_includes_todo_case_sensitive():
+    notes = [
+        "pickup groceries",
+        "buy milk #Todo",
+        "call mom"
+    ]
+    result = includes_todo(notes)
+    assert result == True
